@@ -39,6 +39,7 @@
             transform: translateX(-50%);
             transition: background-color 0.3s ease;
             z-index: 3;
+            text-align: center; /* Centraliza o texto no botão */
         }
 
         .cta-button:hover {
@@ -169,7 +170,7 @@
                 flex-wrap: wrap;
                 justify-content: space-evenly;
                 gap: 15px;
-                margin-top: 6%;
+                margin-top: 5%; /* Subir um pouco as cartas */
             }
 
             .tarot-card {
@@ -180,6 +181,10 @@
             .cta-button {
                 font-size: 1em;
                 padding: 10px 20px;
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%); /* Garantir o botão centralizado */
             }
 
             /* Ajuste para cartas expandidas no celular */
