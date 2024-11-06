@@ -14,6 +14,8 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2a0944, #3b185f, #916bbf);
+            color: #f7f7f7;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -48,7 +50,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: url('fundo1.png') no-repeat center center;
+            background: url('fundo1.PNG') no-repeat center center;
             background-size: cover;
             z-index: -1;
             opacity: 0.7;
@@ -158,24 +160,36 @@
             display: none;
         }
 
-        /* Exibir as cartas em escala 2x2 em dispositivos móveis */
-        @media (max-width: 600px) {
+        /* Ajustes para celular */
+        @media (max-width: 768px) {
             .tarot-cards-container {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 10px;
             }
 
-            /* Diminuir o tamanho das cartas quando expandidas no celular */
-            .tarot-card.expanded {
-                width: 300px; /* Menor largura */
-                height: 400px; /* Menor altura */
-            }
-
-            /* Ajuste no botão de agendar consulta */
             .cta-button {
                 font-size: 1em; /* Ajustar o tamanho da fonte */
                 padding: 10px 20px; /* Ajustar o padding */
+            }
+
+            /* Ajuste para cartas expandidas no celular */
+            .tarot-card.expanded {
+                width: 280px; /* Tamanho ajustado para o celular */
+                height: 400px; /* Tamanho ajustado para o celular */
+            }
+        }
+
+        /* Ajuste específico para iPhone 12 Pro Max */
+        @media (max-width: 820px) {
+            .tarot-card.expanded {
+                width: 320px; /* Ajuste para iPhone 12 Pro Max */
+                height: 450px; /* Ajuste para iPhone 12 Pro Max */
+            }
+
+            .cta-button {
+                font-size: 1.1em; /* Ajuste do botão para telas maiores */
+                padding: 12px 25px; /* Ajuste do padding */
             }
         }
     </style>
