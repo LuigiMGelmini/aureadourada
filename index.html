@@ -14,11 +14,14 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2a0944, #3b185f, #916bbf);
+            color: #f7f7f7;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             overflow: hidden;
+            position: relative;
         }
 
         .cta-button {
@@ -71,6 +74,7 @@
             justify-content: center;
             gap: 50px;
             margin-top: 12%;
+            flex-wrap: wrap;
         }
 
         .tarot-card {
@@ -161,10 +165,11 @@
         /* Ajustes para celular */
         @media (max-width: 768px) {
             .tarot-cards-container {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-                margin-top: 20%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                gap: 15px;
+                margin-top: 15%;
             }
 
             .tarot-card {
@@ -173,8 +178,8 @@
             }
 
             .cta-button {
-                font-size: 1em; /* Ajustar o tamanho da fonte */
-                padding: 10px 20px; /* Ajustar o padding */
+                font-size: 1em;
+                padding: 10px 20px;
             }
 
             /* Ajuste para cartas expandidas no celular */
@@ -192,8 +197,8 @@
             }
 
             .cta-button {
-                font-size: 1.1em; /* Ajuste do botão para telas maiores */
-                padding: 12px 25px; /* Ajuste do padding */
+                font-size: 1.1em;
+                padding: 12px 25px;
             }
         }
     </style>
