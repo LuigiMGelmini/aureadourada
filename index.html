@@ -39,6 +39,7 @@
             transform: translateX(-50%);
             transition: background-color 0.3s ease;
             z-index: 3;
+            text-align: center; /* Centralizar o texto dentro do botão */
         }
 
         .cta-button:hover {
@@ -73,7 +74,7 @@
             display: flex;
             justify-content: center;
             gap: 50px;
-            margin-top: 12%;
+            margin-top: 10%;
             flex-wrap: wrap;
         }
 
@@ -142,10 +143,6 @@
             transform: rotateY(180deg);
         }
 
-        .tarot-card.flipped {
-            transform: rotateY(180deg);
-        }
-
         /* Estilo para a carta expandida */
         .tarot-card.expanded {
             width: 400px; /* Manter a largura original */
@@ -157,48 +154,38 @@
             z-index: 2;
         }
 
-        /* Ocultar outras cartas quando uma está expandida */
-        .tarot-cards-container.expanded .tarot-card:not(.expanded) {
-            display: none;
-        }
-
         /* Ajustes para celular */
         @media (max-width: 768px) {
             .tarot-cards-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-                gap: 15px;
-                margin-top: 15%;
-            }
-
-            .tarot-card {
-                width: 150px; /* Ajuste do tamanho da carta */
-                height: 225px; /* Ajuste do tamanho da carta */
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                margin-top: 6%; /* Subir as cartas um pouco */
             }
 
             .cta-button {
-                font-size: 1em;
-                padding: 10px 20px;
+                font-size: 1em; /* Ajustar o tamanho da fonte */
+                padding: 10px 20px; /* Ajustar o padding */
+                bottom: 20px; /* Manter o botão na parte inferior */
             }
 
             /* Ajuste para cartas expandidas no celular */
             .tarot-card.expanded {
-                width: 250px; /* Tamanho ajustado para o celular */
-                height: 350px; /* Tamanho ajustado para o celular */
+                width: 280px; /* Tamanho ajustado para o celular */
+                height: 400px; /* Tamanho ajustado para o celular */
             }
         }
 
         /* Ajuste específico para iPhone 12 Pro Max */
         @media (max-width: 820px) {
             .tarot-card.expanded {
-                width: 280px; /* Ajuste para iPhone 12 Pro Max */
-                height: 400px; /* Ajuste para iPhone 12 Pro Max */
+                width: 320px; /* Ajuste para iPhone 12 Pro Max */
+                height: 450px; /* Ajuste para iPhone 12 Pro Max */
             }
 
             .cta-button {
-                font-size: 1.1em;
-                padding: 12px 25px;
+                font-size: 1.1em; /* Ajuste do botão para telas maiores */
+                padding: 12px 25px; /* Ajuste do padding */
             }
         }
     </style>
